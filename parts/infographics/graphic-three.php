@@ -1,0 +1,1 @@
+<div data-report-chart="data-centers" data-lazy="true"></div>

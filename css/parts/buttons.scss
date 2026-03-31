@@ -1,0 +1,75 @@
+@use 'mixins.scss' as *;
+
+.buttons {
+	display: inline-flex;
+	gap: var(--size-200);
+	margin-block-start: var(--size-400);
+}
+
+button:not(.menu-toggle-btn), .btn {
+	display: inline-flex;
+	align-items: center;
+	gap: var(--size-400);
+	width: auto;
+	height: 60px;
+	font-family: inherit;
+	font-size: var(--size-500);
+	font-weight: 400;
+	line-height: 1;
+	letter-spacing: -0.02em;
+	text-transform: uppercase;
+	background-color: var(--blue-light);
+	box-shadow: none;
+	border: 1px solid var(--border-colour);
+	border-radius: 0;
+	color: var(--charcoal);
+	padding: 0 0 0 var(--size-400);
+	cursor: pointer;
+	text-decoration: none;
+	transition: background-color .25s, color .25s;
+	span {
+		display: inline-flex;
+		align-items: center;
+		justify-content: center;
+		width: 60px;
+		height: 100%;
+		background-color: var(--blue);
+		border-left: 1px solid var(--border-colour);
+	}
+	svg {
+		display: block;
+		fill: currentColor;
+		transition: fill .25s, opacity .25s;
+	}
+	&.btn--download {
+		background-color: var(--green-light);
+		span {
+			background-color: var(--green);
+		}
+		svg {
+			transform: rotate(180deg);
+		}
+	}
+	&.btn--small {
+		font-size: var(--size-200);
+		padding: var(--size-100) var(--size-200);
+	}
+	&.btn--border {
+		background-color: transparent;
+		color: currentColor;
+		border-color: currentColor;
+	}
+	&:disabled {
+		cursor: not-allowed;
+	}
+	&.btn--home {
+		svg {
+			transform: rotate(90deg);
+		}
+	}
+	@media(hover : hover){
+		&:hover {
+			background-color: var(--green);
+		}
+	}
+}

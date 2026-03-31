@@ -1,0 +1,50 @@
+@use 'mixins.scss' as *;
+
+label {
+	display: block;
+	font-size: var(--size-200);
+	margin-bottom: 0;
+}
+
+input[type="text"],input[type="email"],input[type="search"],select,input[type="file"],textarea,.filters summary {
+	display: block;
+	width: 100%;
+	padding: var(--size-200) var(--size-400);
+	border-radius: var(--border-radius);
+	-webkit-appearance: none;
+	appearance: none;
+	border: 1px solid var(--black);
+	background-color: var(--white);
+	outline: none;
+	font-family: inherit;
+	font-size: var(--size-300);
+	color: var(--black);
+}
+
+input[type="text"],input[type="email"],input[type="search"],select {
+	line-height: 1;
+}
+
+textarea {
+	line-height: 1.5;
+}
+
+input[type="checkbox"], input[type="radio"] {
+	-webkit-appearance: none;
+	appearance: none;
+	margin: 0 var(--size-200) 0 0;
+	padding: var(--size-200);
+	border: 1px solid var(--black);
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	outline: none;
+}
+
+input[type="radio"] {
+	border-radius: 50%;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+	border-style: dashed;
+	background-color: var(--black);
+}

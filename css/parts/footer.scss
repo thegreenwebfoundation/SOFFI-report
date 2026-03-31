@@ -1,0 +1,81 @@
+@use 'mixins.scss' as *;
+
+footer {
+	background-color: var(--charcoal);
+	color: var(--white);
+	padding: var(--size-1000) 0;
+	.inner-wrapper {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: wrap;
+		gap: var(--size-900);
+		> div {
+			display: flex;
+			width: 100%;
+			&:not(.buttons){
+				gap: var(--size-700);
+				@include media('large') {
+					gap: var(--size-1000);
+				}
+			}
+			@include media('large') {
+				width: 50%;
+				flex: 1;
+			}
+		}
+		.tgwf-logo {
+			display: block;
+		}
+		ul {
+			list-style: none;
+			flex: 1 0 auto;
+			li {
+				margin: 0 0 calc(var(--size-100) / 2);
+				a {
+					text-decoration: underline;
+				}
+			}
+		}
+		.buttons {
+			margin: 0;
+			@include media('large') {
+				justify-content: center;
+			}
+			a {
+				display: inline-flex;
+				flex-direction: column;
+				gap: var(--size-700);
+				width: 190px;
+				padding: var(--size-50);
+				box-sizing: border-box;
+				font-weight: 500;
+				font-size: var(--size-500);
+				line-height: 1;
+				letter-spacing: -0.02em;
+				text-decoration: none;
+				@include media('large') {
+					font-size: var(--size-600);
+				}
+				&.download {
+					background-color: var(--green);
+					color: var(--charcoal);
+					svg {
+						transform: rotate(180deg);
+					}
+				}
+				&.back-to-top {
+					background-color: var(--charcoal-light);
+				}
+				svg {
+					display: block;
+					fill: currentColor;
+				}
+				span {
+					max-width: 10ch;
+					justify-self: flex-end;
+					margin-top: auto;
+				}
+			}
+		}
+	}
+}

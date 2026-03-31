@@ -1,0 +1,41 @@
+@use 'mixins.scss' as *;
+
+.inner-wrapper {
+	padding-inline: var(--size-600);
+	@include media('medium') {
+		padding-inline: var(--size-950);
+	}
+}
+
+// section {
+// 	padding-block-start: var(--size-800);
+// 	&:has(.section-intro) {
+// 		padding-block-start: 0;
+// 	}
+// }
+
+.section--part {
+	padding-block: var(--size-800);
+}
+
+
+@include media('medium') {
+	// section {
+	// 	padding-block-start: var(--size-1000);
+	// }
+	.section--part {
+		padding-block: var(--size-1000);
+	}
+}
+
+.no-padding-top {
+	padding-block-start: 0;
+}
+
+.no-padding-bottom {
+	padding-block-end: 0;
+}
+
+.no-padding {
+	padding-block: 0;
+}

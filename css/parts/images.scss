@@ -1,0 +1,21 @@
+@use 'mixins.scss' as *;
+
+img, iframe, .wp-caption {
+	max-width: 100%;
+}
+
+.wp-caption {
+	display: inline-block;
+	margin: var(--size-400) 0;
+}
+
+.wp-caption > img {
+	display: block;
+	height: auto;
+}
+
+.wp-caption-text, figcaption {
+	display: inline-block;
+	font-size: var(--size-200);
+	margin: var(--size-100) 0 var(--size-400);
+}

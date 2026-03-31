@@ -1,0 +1,1 @@
+<div data-report-chart="scores" data-height="auto" data-lazy="true"></div>

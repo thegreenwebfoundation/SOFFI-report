@@ -1,0 +1,13 @@
+@use 'mixins.scss' as *;
+
+.section--part.flowchart {
+	.inner-wrapper {
+		> div {
+			aspect-ratio: 2/0.8;
+			border: 1px solid var(--border-colour);
+			padding: 1rem;
+			background: var(--paper-dark);
+		}
+	}
+}
+

@@ -1,0 +1,1 @@
+<div data-report-chart="globe" data-lazy="true"></div>

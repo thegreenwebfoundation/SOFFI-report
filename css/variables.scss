@@ -1,0 +1,37 @@
+:root {
+	--base-size: 16px;
+	--size-50: 0.4375rem; /* 7px */
+	--size-100: 0.625rem; /* 10px */
+	--size-200: 0.75rem; /* 12px */
+	--size-300: 0.875rem; /* 14px */
+	--size-400: 1rem; /* 16px */
+	--size-500: 1.125rem; /* 18px */
+	--size-600: 1.25rem; /* 20px */
+	--size-700: 1.5rem; /* 24px */
+	--size-800: 1.75rem; /* 28px */
+	--size-900: 2.125rem; /* 34px */
+	--size-950: 3rem; /* 48px */
+	--size-1000: 4.125rem; /* 66px */
+	--white: #FFF;
+	--white-50: #FFFFFF94;
+	--white-40: #FFFFFF66;
+	--black: #000;
+	--charcoal: #3E3E34;
+	--charcoal-light: #575757;
+	--paper: #DCDACD;
+	--paper-dark: #CCCAB6;
+	--paper-01: linear-gradient(0deg, rgba(255, 255, 255, 0.25), rgba(255, 255, 255, 0.25));
+	--paper-02: linear-gradient(0deg, rgba(255, 255, 255, 0.45), rgba(255, 255, 255, 0.45));
+	--paper-03: linear-gradient(0deg, rgba(255, 255, 255, 0.65), rgba(255, 255, 255, 0.65));
+	--paper-04: linear-gradient(0deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.85));
+	--green: #00FF00;
+	--green-light: #D9FFD9;
+	--green-35: #00FF0059;
+	--blue: #52C6C9;
+	--blue-light: #ACD3CC;
+	--blue-35: #52C6C959;
+	--pink: #F482F6;
+	--pink-35: #F482F659;
+	--border-colour: var(--charcoal);
+	--border-radius: 0;
+}

@@ -1,0 +1,1 @@
+<div data-report-chart="emmissions" data-height="auto" data-lazy="true"></div>

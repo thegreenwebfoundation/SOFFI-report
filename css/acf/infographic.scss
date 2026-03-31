@@ -1,0 +1,11 @@
+@use 'mixins.scss' as *;
+
+.section--part.infographic {
+	.graphic-container > div:not([data-height="auto"]){
+		height: 80lvh;
+		min-height: 500px;
+		@include media('medium') {
+			height: 500px;
+		}
+	}
+}

@@ -1,0 +1,1 @@
+<div data-report-chart="footprint" data-lazy="true"></div>
