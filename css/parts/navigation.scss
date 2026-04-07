@@ -39,7 +39,7 @@ nav {
 	@include media('small') {
 		top: 46px;
 		right: 0;
-		transform: translateX(calc(100% - 45px));
+		transform: translateX(calc(100% - 46px));
 		transition: transform calc(var(--transition-time) * 2) ease-in-out;
 		&:focus-within,
 		&:hover {
@@ -71,9 +71,10 @@ nav {
 		margin: 0;
 		padding: 0;
 		counter-reset: li;
-		@include media('to-small') {
-			backdrop-filter: blur(2px);
-		}
+		backdrop-filter: blur(2px);
+		// @include media('to-small') {
+		// 	backdrop-filter: blur(2px);
+		// }
 		@include media('small') {
 			flex-direction: column;
 		}
@@ -86,10 +87,14 @@ nav {
 				}
 			}
 			@include media('to-small') {
-				&:first-of-type,
+				&:first-of-type {
+					a {
+						border-left-width: 0px;
+					}
+				}
 				&:last-of-type {
 					a {
-						border-width: 1px 0px;
+						border-right-width: 0px;
 					}
 				}
 			}

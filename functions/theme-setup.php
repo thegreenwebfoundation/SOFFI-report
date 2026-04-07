@@ -16,6 +16,12 @@ add_action('after_setup_theme', 'soffi_setup');
 
 // add thumbnail support
 add_theme_support( 'post-thumbnails' );
+
+// add custom image sizes
+if ( function_exists( 'add_image_size' ) ) {
+    add_image_size( 'section-bg', 1700, 470, true );
+}
+
 add_theme_support( 'title-tag' );
 
 ?>

@@ -131,3 +131,11 @@ small,
 	font-size: var(--size-100);
 	line-height: 1.3;
 }
+
+.annotate {
+	display: inline;
+	padding: 0 0.1em;
+	position: relative;
+	z-index: 0;
+	box-decoration-break: clone;
+}

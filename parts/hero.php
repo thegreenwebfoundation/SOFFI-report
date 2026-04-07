@@ -6,7 +6,9 @@
 ?>
 <section class="hero" id="top" tab-index="-1">
 	<div class="inner-wrapper">
-		<?php echo file_get_contents( get_template_directory_uri() . '/images/TGWF-logo.svg' ); ?>
+		<a href="https://www.thegreenwebfoundation.org/" title="Visit the Green Web Foundation website" target="_blank" rel="noopener">
+			<?php echo file_get_contents( get_template_directory_uri() . '/images/TGWF-logo.svg' ); ?>
+		</a>
 		<div class="flow">
 			<?php if($hero_title): ?>
 				<h1 class="hero--title"><?php echo esc_attr($hero_title); ?></h1>

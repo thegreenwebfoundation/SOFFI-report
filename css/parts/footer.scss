@@ -14,6 +14,7 @@ footer {
 			width: 100%;
 			&:not(.buttons){
 				gap: var(--size-700);
+				align-items: flex-start;
 				@include media('large') {
 					gap: var(--size-1000);
 				}
@@ -22,17 +23,25 @@ footer {
 				width: 50%;
 				flex: 1;
 			}
+			> a {
+				display: inline-block;
+			}
 		}
 		.tgwf-logo {
 			display: block;
+			width: auto;
+			height: auto;
+			max-width: 100%;
 		}
 		ul {
 			list-style: none;
 			flex: 1 0 auto;
+			margin: 0;
 			li {
 				margin: 0 0 calc(var(--size-100) / 2);
 				a {
 					text-decoration: underline;
+					text-underline-offset: 0.18em;
 				}
 			}
 		}

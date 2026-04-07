@@ -1,7 +1,6 @@
 @use 'mixins.scss' as *;
 
-section.hero,
-.section-intro {
+section.hero {
 	display: block;
 	padding: 0;
 	height: 100lvh;
@@ -35,7 +34,13 @@ section.hero,
 			@include media('large') {
 				position: absolute;
 				bottom: 0;
-				right: var(--size-950);
+				right: var(--size-1000);
+			}
+			@include media('x-large') {
+				right: calc(var(--size-1000) * 1.5);
+			}
+			@include media('xx-large') {
+				right: calc(var(--size-1000) * 2);
 			}
 		}
 	}
@@ -51,7 +56,42 @@ section.hero,
 }
 
 .section-intro {
+	display: block;
+	width: 100%;
+	height: auto;
+	background-color: var(--charcoal);
+	color: var(--white);
+	position: relative;
+	z-index: 2;
 	.inner-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
 		justify-content: flex-end;
+		height: auto;
+		min-height: 470px;
+		position: relative;
+		z-index: 1;
+		padding-block: var(--size-1000) var(--size-950);
+		@include media('small') {
+			padding-block: var(--size-950);
+		}
+	}
+	.image--bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		object-fit: cover;
+	}
+	.grad--bg {
+		width: 100%;
+		height: 100%;
+		position: absolute;
+		top: 0;
+		left: 0;
+		background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 50.64%, var(--charcoal) 95.29%);
+		filter: url(#grainy-duotone);
 	}
 }

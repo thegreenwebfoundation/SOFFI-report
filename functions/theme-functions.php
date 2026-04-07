@@ -164,6 +164,12 @@ function customformatTinyMCE($init) {
             'selector' => 'p',
             'classes' => 'caps'
         ),
+        array(
+            'title' => 'Annotate / highligher pen',
+            'inline' => 'span',
+            'wrapper' => true,
+            'classes' => 'annotate'
+        ),
     );
 
     // Add the styleselect dropdown

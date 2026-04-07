@@ -22,6 +22,26 @@
 						break;
 				}
 			?>
+			<?php
+				$graphic_source = get_sub_field('infographic_source');
+				$graphic_download = get_sub_field('infographic_download');
+				if($graphic_source || $graphic_download):
+			?>
+				<div class="graphic-info">
+					<div>
+						<?php if($graphic_source){ ?>
+							<p><?php echo esc_attr($graphic_source); ?></p>
+						<?php } ?>
+					</div>
+					<div>
+						<?php if($graphic_download){ ?>
+							<a class="btn btn--download" href="<?php echo esc_url($graphic_download); ?>" title="Download the infographic" download>Download <span><svg aria-hidden="true" width="30" height="30"><use href="#arrow"></use></svg></a>
+						<?php } ?>
+					</div>
+				</div>
+			<?php
+				endif;
+			?>
 		</div>
 	</div>
 </div>

@@ -3,16 +3,15 @@
 .inner-wrapper {
 	padding-inline: var(--size-600);
 	@include media('medium') {
-		padding-inline: var(--size-950);
+		padding-inline: var(--size-1000);
+	}
+	@include media('x-large') {
+		padding-inline: calc(var(--size-1000) * 1.5);
+	}
+	@include media('xx-large') {
+		padding-inline: calc(var(--size-1000) * 2);
 	}
 }
-
-// section {
-// 	padding-block-start: var(--size-800);
-// 	&:has(.section-intro) {
-// 		padding-block-start: 0;
-// 	}
-// }
 
 .section--part {
 	padding-block: var(--size-800);
@@ -20,11 +19,8 @@
 
 
 @include media('medium') {
-	// section {
-	// 	padding-block-start: var(--size-1000);
-	// }
 	.section--part {
-		padding-block: var(--size-1000);
+		padding-block: calc(var(--size-1000) * 1.5);
 	}
 }
 

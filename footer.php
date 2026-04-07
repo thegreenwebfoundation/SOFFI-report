@@ -15,7 +15,9 @@ $navFooter = array(
 	<footer>
 		<div class="inner-wrapper">
 			<div>
-				<?php echo file_get_contents( get_template_directory_uri() . '/images/TGWF-logo.svg' ); ?>
+				<a href="https://www.thegreenwebfoundation.org/" title="Visit the Green Web Foundation website" target="_blank" rel="noopener">
+					<?php echo file_get_contents( get_template_directory_uri() . '/images/TGWF-logo.svg' ); ?>
+				</a>
 				<?php wp_nav_menu( $navFooter ); ?>
 			</div>
 			<div class="buttons">
@@ -31,8 +33,13 @@ $navFooter = array(
 
 	<?php echo file_get_contents(get_template_directory_uri() . '/parts/icons/icons.svg'); ?>
 
-	<svg style="display: none;" width="0" height="0" aria-hidden="true">
-		<filter id="grainy-duotone" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+	<svg class="sr-only" width="1" height="1" aria-hidden="true">
+		<filter
+			id="grainy-duotone"
+			filterUnits="userSpaceOnUse"
+			x="0" y="0"
+			width="100%" height="100%"
+			color-interpolation-filters="sRGB">
 		<feTurbulence type="fractalNoise" baseFrequency="0.66" numOctaves="2" result="noise"/>
 			<feColorMatrix type="saturate" values="0" in="noise" result="grayNoise"/>
 			<feComponentTransfer in="SourceGraphic" result="duotone">

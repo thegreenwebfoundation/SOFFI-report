@@ -29,7 +29,7 @@
                                     echo '<h4 class="carousel--item-title bg-' . esc_attr($c_item_colour) . '">' . esc_attr( $c_item_title ) . '</h4>';
                                 } ?>
                                 <?php if($c_item_image){
-                                    echo wp_get_attachment_image( $c_item_image, 'thumbnail', array( "class" => "carousel--item-image", "loading" => "lazy" ) );
+                                    echo wp_get_attachment_image( $c_item_image, 'thumbnail', "", array( "class" => "carousel--item-image", "loading" => "lazy" ) );
                                 } ?>
                             </div>
                             <div class="carousel--item-text flow">

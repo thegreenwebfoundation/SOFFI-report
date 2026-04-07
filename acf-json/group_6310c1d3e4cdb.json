@@ -82,7 +82,7 @@
                             "required": 0,
                             "conditional_logic": 0,
                             "wrapper": {
-                                "width": "",
+                                "width": "50",
                                 "class": "",
                                 "id": ""
                             },
@@ -97,6 +97,40 @@
                             "allow_in_bindings": 0,
                             "layout": "horizontal",
                             "save_other_choice": 0
+                        },
+                        {
+                            "key": "field_69cd04c448276",
+                            "label": "Intro background image",
+                            "name": "intro_background_image",
+                            "aria-label": "",
+                            "type": "image",
+                            "instructions": "Add an image for the intro. The fallback is to use the gradient - like the hero at the top of the page.",
+                            "required": 0,
+                            "conditional_logic": [
+                                [
+                                    {
+                                        "field": "field_69aadbd863037",
+                                        "operator": "==",
+                                        "value": "yes"
+                                    }
+                                ]
+                            ],
+                            "wrapper": {
+                                "width": "50",
+                                "class": "",
+                                "id": ""
+                            },
+                            "return_format": "id",
+                            "library": "all",
+                            "min_width": "",
+                            "min_height": "",
+                            "min_size": "",
+                            "max_width": "",
+                            "max_height": "",
+                            "max_size": "",
+                            "mime_types": "",
+                            "allow_in_bindings": 0,
+                            "preview_size": "medium"
                         },
                         {
                             "key": "field_69aadc6063038",
@@ -261,8 +295,50 @@
                                             "allow_null": 0,
                                             "other_choice": 0,
                                             "allow_in_bindings": 0,
-                                            "layout": "vertical",
+                                            "layout": "horizontal",
                                             "save_other_choice": 0
+                                        },
+                                        {
+                                            "key": "field_69cd050c48277",
+                                            "label": "Infographic source",
+                                            "name": "infographic_source",
+                                            "aria-label": "",
+                                            "type": "text",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "default_value": "",
+                                            "maxlength": "",
+                                            "allow_in_bindings": 0,
+                                            "placeholder": "",
+                                            "prepend": "",
+                                            "append": ""
+                                        },
+                                        {
+                                            "key": "field_69cd054248278",
+                                            "label": "Infographic download",
+                                            "name": "infographic_download",
+                                            "aria-label": "",
+                                            "type": "file",
+                                            "instructions": "",
+                                            "required": 0,
+                                            "conditional_logic": 0,
+                                            "wrapper": {
+                                                "width": "50",
+                                                "class": "",
+                                                "id": ""
+                                            },
+                                            "return_format": "url",
+                                            "library": "all",
+                                            "min_size": "",
+                                            "max_size": "",
+                                            "mime_types": "",
+                                            "allow_in_bindings": 0
                                         },
                                         {
                                             "key": "field_69b13f6d39ef3",
@@ -820,5 +896,5 @@
     "description": "",
     "show_in_rest": 0,
     "display_title": "",
-    "modified": 1773227402
+    "modified": 1775046127
 }

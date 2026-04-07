@@ -29,7 +29,7 @@
 	);
 ?>
 	<?php if(!is_404()): ?>
-		<a id="gwf-icon" href="https://greenweb.org/" target="_blank" rel="noopener" title="Visit the Green Web Foundation website">
+		<a id="gwf-icon" href="#top" title="Back to the top">
 			<?php echo file_get_contents( get_template_directory_uri() . '/images/TGWF-icon.svg' ); ?>
 		</a>
 		<nav id="site-nav">
