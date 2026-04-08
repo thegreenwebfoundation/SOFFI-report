@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lazy Loading (Auto on Scroll) - Bandwidth Test</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      margin: 0 auto;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      color: #333;
+    }
+    .test-section {
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 20px 0;
+      height: 500px;
+      overflow: hidden;
+      position: relative;
+    }
+    .test-section > div[data-report-chart],
+    .test-section > .chart-container {
+      position: absolute;
+      top: 60px;
+      left: 20px;
+      right: 20px;
+      bottom: 20px;
+      overflow: hidden;
+    }
+    .test-section > div[data-report-chart] > *,
+    .test-section > .chart-container > * {
+      max-width: 100%;
+      max-height: 100%;
+    }
+    /* Auto-height sections: no fixed height, chart flows naturally */
+    .test-section--auto {
+      height: auto;
+      overflow: visible;
+    }
+    .test-section--auto > div[data-report-chart] {
+      position: static;
+      overflow: visible;
+    }
+    h2 {
+      margin-top: 0;
+    }
+    .chart-container {
+      min-height: 200px;
+      border: 2px dashed #ddd;
+      padding: 10px;
+    }
+    .section-header {
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      margin: 2rem 0 1rem 0;
+    }
+    .section-header h2 {
+      margin: 0 0 0.5rem 0;
+    }
+    .section-header p {
+      margin: 0;
+      color: #555;
+      font-size: 0.95rem;
+    }
+    .info-box {
+      border: 1px solid #ccc;
+      padding: 1.5rem;
+      margin: 1.5rem 0;
+    }
+    .info-box h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    .info-box p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .info-box ul {
+      margin: 0.5rem 0;
+      padding-left: 1.5rem;
+      color: #555;
+    }
+    .spacer {
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      color: #999;
+      font-weight: 300;
+    }
+    .back-link {
+      display: inline-block;
+      margin-bottom: 1rem;
+      text-decoration: none;
+    }
+    .back-link:hover {
+      text-decoration: underline;
+    }
+
+    /* ============================================================
+       ADVERSARIAL HOST-PAGE CSS — Shadow DOM Isolation Test
+       This CSS should NOT affect charts rendered inside shadow DOM.
+       If charts look broken (red text, Comic Sans, yellow bg),
+       the Shadow DOM isolation is NOT working correctly.
+       ============================================================ */
+    #adversarial-banner {
+      background: #cc0000;
+      color: white !important;
+      font-family: monospace !important;
+      padding: 12px 20px;
+      font-size: 14px !important;
+      letter-spacing: normal !important;
+      margin-bottom: 16px;
+    }
+    *, *::before, *::after {
+      font-family: 'Comic Sans MS', cursive, fantasy !important;
+      color: red !important;
+      letter-spacing: 0.25em !important;
+    }
+    div, section, article {
+      background-color: rgba(255, 255, 0, 0.25) !important;
+      outline: 3px solid blue !important;
+    }
+    svg text, svg tspan {
+      fill: red !important;
+      font-size: 30px !important;
+    }
+    .flex { display: grid !important; }
+    .grid { display: flex !important; }
+    button, [role="button"] {
+      background: hotpink !important;
+      border-radius: 0 !important;
+    }
+  </style>
+</head>
+<body>
+  <div id="adversarial-banner">
+    ⚠ ADVERSARIAL CSS IS ACTIVE — Charts inside shadow DOM should be unaffected (correct fonts, colors, and layout). If charts look broken, isolation is not working.
+  </div>
+
+  <a href="test.html" class="back-link">← Back to All Tests</a>
+
+  <h1>Lazy Loading (Auto on Scroll) - Bandwidth Test</h1>
+
+  <!-- SECTION: LAZY LOADING -->
+  <div class="section-header">
+    <h2>2. Lazy Loading Tests</h2>
+    <p>Charts load automatically when scrolled into view using Intersection Observer. Reduces initial page load.</p>
+  </div>
+
+  <div class="spacer">Scroll down to trigger lazy loading</div>
+
+  <div class="test-section">
+    <h2>Test 2.1: Globe — Lazy Load with Static Image</h2>
+    <div
+      data-report-chart="globe"
+      data-lazy="true"
+    ></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Test 2.2: Globe — Lazy Load without Static Image</h2>
+    <div
+      data-report-chart="globe"
+      data-lazy="true"
+    ></div>
+  </div>
+
+  <div class="test-section test-section--auto">
+    <h2>Test 2.3: Scores — Lazy Load</h2>
+    <div
+      data-report-chart="scores"
+      data-lazy="true"
+      data-height="auto"
+    ></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Test 2.4: Data Centers — Lazy Load</h2>
+    <div
+      data-report-chart="data-centers"
+      data-lazy="true"
+    ></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Test 2.5: Footprint — Lazy Load</h2>
+    <div
+      data-report-chart="footprint"
+      data-lazy="true"
+    ></div>
+  </div>
+
+  <div class="test-section test-section--auto">
+    <h2>Test 2.6: Emmissions — Lazy Load</h2>
+    <div
+      data-report-chart="emmissions"
+      data-lazy="true"
+      data-height="auto"
+    ></div>
+  </div>
+
+  <div class="test-section">
+    <h2>Test 2.7: Manual Lazy Load</h2>
+    <div id="chart-lazy-manual" class="chart-container"></div>
+  </div>
+
+  <!-- Configure base path for subdirectory deployment -->
+  <script>
+    window.__REPORT_CHART_BASE__ = ''; // Set to '/subdir' if deployed to a subdirectory
+  </script>
+
+  <!-- Load the MINIMAL LOADER for lazy loading (loads heavy components only when needed) -->
+  <script type="module">
+    const base = window.__REPORT_CHART_BASE__ || '';
+
+    // Import minimal loader - only ~2-5 KB initially
+    // LazyChart wrapper and chart component load when scrolled into view
+    const { default: ReportChartModule } = await import(`${base}/report-loader.js`);
+    window.ReportChart = ReportChartModule;
+
+    // Test 2.7: Lazy loading (auto on scroll) manual init
+    ReportChartModule.init('#chart-lazy-manual', {
+      // Chart props go here
+    }, {
+      lazy: true
+    });
+  </script>
+</body>
+</html>
