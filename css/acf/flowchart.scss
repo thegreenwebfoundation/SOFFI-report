@@ -3,10 +3,103 @@
 .section--part.flowchart {
 	.inner-wrapper {
 		> div {
-			aspect-ratio: 2/0.8;
+			padding: var(--size-700) var(--size-600) var(--size-700);
+			@include media('large') {
+				padding: var(--size-800) var(--size-800) 2.9em;
+			}
+			&:first-of-type {
+				display: inline-flex;
+				flex-direction: column;
+				background-color: var(--charcoal);
+				color: var(--white);
+				p {
+					max-width: 24ch;
+				}
+				> div {
+					justify-self: flex-end;
+					align-self: flex-end;
+					margin-top: auto;
+					width: max-content;
+					height: max-content;
+					svg {
+						display: block;
+						margin-top: var(--size-800);
+						@include media('to-x-large') {
+							width: 100px;
+							height: auto;
+						}
+					}
+				}
+			}
+			&:last-of-type {
+				background: var(--paper);
+			}
+			&.flow>*+* {
+				-webkit-margin-before: 2.5em;
+				margin-block-start: 2.5em;
+			}
+		}
+		.solution-pathways--item {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-end;
 			border: 1px solid var(--border-colour);
-			padding: 1rem;
-			background: var(--paper-dark);
+			margin: 0;
+			width: 100%;
+			height: auto;
+			aspect-ratio: 1/1.1;
+			position: relative;
+			&:after {
+				content: "";
+				background: linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0%, rgba(102, 102, 102, 0) 100%);
+				width: 100%;
+				height: 100%;
+				position: absolute;
+				top: 0;
+				left: 0;
+				z-index: 1;
+			}
+			img {
+				display: block;
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			.solution-pathways--item-subtitle {
+				position: absolute;
+				top: 0;
+				left: 0;
+				padding: var(--size-100);
+				font-size: var(--size-200);
+				line-height: 1;
+				text-transform: uppercase;
+				z-index: 2;
+			}
+			.solution-pathways--item-title {
+				text-wrap: balance;
+				max-width: 13ch;
+				padding: var(--size-200);
+				color: var(--white);
+				z-index: 2;
+				@include media('large') {
+					padding: var(--size-300);
+				}
+			}
+			.solution-pathways--item-text {
+				width: 100%;
+				max-width: 100%;
+				background-color: #E7E5DD;
+				padding: var(--size-200);
+				font-size: var(--size-300);
+				line-height: 1.2;
+				z-index: 2;
+				@include media('large') {
+					padding: var(--size-400) var(--size-300);
+				}
+			}
 		}
 	}
 }

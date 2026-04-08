@@ -26,11 +26,13 @@
 				span {
 					background-color: var(--blue);
 				}
+				@include media('to-large') {
+					transform: translateY(calc(var(--size-400) * -1));
+				}
 				@include media('large') {
 					position: absolute;
 					top: -1px;
 					right: var(--size-900);
-					//transform: translateY(-100%);
 				}
 			}
 		}

@@ -9,11 +9,11 @@
 button:not(.menu-toggle-btn), .btn {
 	display: inline-flex;
 	align-items: center;
-	gap: var(--size-400);
+	gap: var(--size-300);
 	width: auto;
-	height: 60px;
+	height: 40px;
 	font-family: inherit;
-	font-size: var(--size-500);
+	font-size: var(--size-300);
 	font-weight: 400;
 	line-height: 1;
 	letter-spacing: -0.02em;
@@ -23,7 +23,7 @@ button:not(.menu-toggle-btn), .btn {
 	border: 1px solid var(--border-colour);
 	border-radius: 0;
 	color: var(--charcoal);
-	padding: 0 0 0 var(--size-400);
+	padding: 0 0 0 var(--size-300);
 	cursor: pointer;
 	text-decoration: none;
 	transition: background-color .25s, color .25s;
@@ -31,7 +31,7 @@ button:not(.menu-toggle-btn), .btn {
 		display: inline-flex;
 		align-items: center;
 		justify-content: center;
-		width: 60px;
+		width: 40px;
 		height: 100%;
 		background-color: var(--blue);
 		border-left: 1px solid var(--border-colour);
@@ -70,6 +70,19 @@ button:not(.menu-toggle-btn), .btn {
 	@media(hover : hover){
 		&:hover {
 			background-color: var(--green);
+		}
+	}
+	@include media('large') {
+		height: 60px;
+		font-size: var(--size-500);
+		gap: var(--size-400);
+		padding: 0 0 0 var(--size-400);
+		span {
+			width: 60px;
+		}
+		svg {
+			width: 30px;
+			height: 30px;
 		}
 	}
 }

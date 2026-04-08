@@ -35,7 +35,7 @@
 					</div>
 					<div>
 						<?php if($graphic_download){ ?>
-							<a class="btn btn--download" href="<?php echo esc_url($graphic_download); ?>" title="Download the infographic" download>Download <span><svg aria-hidden="true" width="30" height="30"><use href="#arrow"></use></svg></a>
+							<a class="btn btn--download" href="<?php echo esc_url($graphic_download); ?>" title="Download the infographic" download>Download <span><svg aria-hidden="true" width="15" height="15"><use href="#arrow"></use></svg></a>
 						<?php } ?>
 					</div>
 				</div>
