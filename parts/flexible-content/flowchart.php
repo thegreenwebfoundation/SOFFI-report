@@ -8,7 +8,7 @@
                 <?php echo wp_kses_post( get_sub_field('problem_content') ); ?>
             <?php } ?>
             <div>
-                <svg width="158" height="191"><use href="#flame-icon"></use></svg>
+                <svg width="158" height="191" aria-hidden="true"><use href="#flame-icon"></use></svg>
             </div>
         </div>
         <div class="col--twelve col--nine-lg flow">
