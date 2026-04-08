@@ -50,8 +50,11 @@ section.hero {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 50.64%, var(--charcoal) 95.29%);
+		background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 40%, var(--charcoal) 70%);
 		filter: url(#grainy-duotone);
+		@include media('large') {
+			background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 50.64%, var(--charcoal) 95.29%);
+		}
 	}
 }
 
@@ -91,7 +94,10 @@ section.hero {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 50.64%, var(--charcoal) 95.29%);
+		background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 40%, var(--charcoal) 70%);
 		filter: url(#grainy-duotone);
+		@include media('large') {
+			background: linear-gradient(233deg, var(--green) -11.46%, var(--blue) 50.64%, var(--charcoal) 95.29%);
+		}
 	}
 }
