@@ -49,6 +49,7 @@
 			height: auto;
 			aspect-ratio: 1/1.1;
 			position: relative;
+			text-decoration: none;
 			&:after {
 				content: "";
 				background: linear-gradient(0deg, rgba(0, 0, 0, 0.66) 0%, rgba(102, 102, 102, 0) 100%);

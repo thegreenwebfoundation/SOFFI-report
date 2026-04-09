@@ -1,5 +1,5 @@
 <?php if(!is_404()): ?>
-	<div id="progress" role="progressbar" aria-label="progress"></div>
+	<div id="progress" role="progressbar" aria-label="progress"><div class="progress-bar-inner"></div></div>
 <?php endif; ?>
 <?php echo get_template_part('parts/content-end');
 

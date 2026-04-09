@@ -5,7 +5,7 @@ a#gwf-icon {
 	top: 0;
 	width: 45px;
 	height: 45px;
-	z-index: 3;
+	z-index: 4;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -28,7 +28,7 @@ a#gwf-icon {
 nav {
 	--transition-time: .3s;
 	position: fixed;
-	z-index: 3;
+	z-index: 4;
 	max-width: 100%;
 	@include media('to-small') {
 		width: calc(100% - 45px);

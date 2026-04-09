@@ -2,6 +2,11 @@
 	<div class="inner-wrapper">
 		<div class="graphic-container">
 			<?php
+				$graphic_title = get_sub_field('infographic_title');
+				if($graphic_title):
+					echo '<h3 class="graphic-title">' . esc_attr($graphic_title) . '</h3>';
+				endif;
+
 				$graphic = get_sub_field('infographic_choice');
 
 				switch( $graphic ) {
@@ -30,7 +35,7 @@
 				<div class="graphic-info">
 					<div>
 						<?php if($graphic_source){ ?>
-							<p><?php echo esc_attr($graphic_source); ?></p>
+							<?php echo wp_kses_post($graphic_source); ?>
 						<?php } ?>
 					</div>
 					<div>
