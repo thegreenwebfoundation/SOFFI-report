@@ -12,7 +12,7 @@
 	<link rel="apple-touch-icon" href="<?php echo esc_url(get_template_directory_uri()); ?>/images/apple-touch-icon.png">
 	<link rel="icon" type="image/png" sizes="32x32" href="<?php echo esc_url(get_template_directory_uri()); ?>/images/favicon-32x32.png">
 	<link rel="icon" type="image/png" sizes="16x16" href="<?php echo esc_url(get_template_directory_uri()); ?>/images/favicon-16x16.png">
-	<link rel="stylesheet" id="screen-css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.min.css?ver=1.0.7" type="text/css" media="all">
+	<link rel="stylesheet" id="screen-css" href="<?php echo esc_url(get_template_directory_uri()); ?>/css/style.min.css?ver=1.0.9" type="text/css" media="all">
 </head>
 <body <?php body_class(); ?>>
 

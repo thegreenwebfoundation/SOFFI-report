@@ -21,7 +21,7 @@
 		</div>
 
 		<?php if($hero_description): ?>
-			<div class="hero--description"><?php echo wp_kses_post($hero_description); ?></div>
+			<div class="hero--description flow"><?php echo wp_kses_post($hero_description); ?></div>
 		<?php endif; ?>
 
 		<?php if($download_pdf): ?>

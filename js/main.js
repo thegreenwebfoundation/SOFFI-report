@@ -29,6 +29,18 @@ document.addEventListener("DOMContentLoaded", () => {
 	  const percent = Math.min(Math.max(progress * 100, 0), 100);
 	  progressBar.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
 	}
-	window.addEventListener('scroll', updateProgress, { passive: true });
+
+	let ticking = false;
+	function onScroll() {
+	  if (!ticking) {
+	    requestAnimationFrame(() => {
+	      updateProgress();
+	      ticking = false;
+	    });
+	    ticking = true;
+	  }
+	}
+
+	window.addEventListener('scroll', onScroll, { passive: true });
 	updateProgress();
 });
