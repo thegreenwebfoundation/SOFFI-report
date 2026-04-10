@@ -21,6 +21,9 @@ section.hero {
 		@include media('large') {
 			max-height: 730px;
 		}
+		@include media('x-large') {
+			min-height: 730px;
+		}
 		@include media('small') {
 			padding-block: var(--size-950);
 		}
