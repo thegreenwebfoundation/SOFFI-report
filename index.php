@@ -39,12 +39,17 @@
 
 	<?php endif; ?>
 
+	<!-- Configure base path for subdirectory deployment -->
 	<script>
-		window.__REPORT_CHART_BASE__ = '/wp-content/themes/soffi/dist';
+		window.__REPORT_CHART_BASE__ = '/wp-content/themes/soffi/dist'; // Set to '/subdir' if deployed to a subdirectory
 	</script>
 
+	<!-- Load the FULL CHART bundle for immediate loading -->
 	<script type="module">
 		const base = window.__REPORT_CHART_BASE__ || '';
+
+		// Import minimal loader - only ~2-5 KB initially
+	    // LazyChart wrapper and chart component load when scrolled into view
 	    const { default: ReportChartModule } = await import(`${base}/report-loader.js`);
 	    window.ReportChart = ReportChartModule;
 	</script>
