@@ -1,13 +1,13 @@
-service,column,label,percentage,value,total
-AWS,fossil-fuel-disclosure-onsite,"their burning of fossil fuels at specific sites in all regions?",0.00,0,22
-AWS,renewable-energy-consumption-onsite,"how much renewable power is generated at their sites?",0.00,0,22
-AWS,provider-cfe-hourly,"their use of carbon free energy on an hourly basis?",0.00,0,22
-AWS,renewable-energy-consumption-goo,"their reliance on certificates for renewable energy elsewhere?",0.00,0,22
-Google Cloud,fossil-fuel-disclosure-onsite,"their burning of fossil fuels at specific sites in all regions?",0.00,0,41
-Google Cloud,renewable-energy-consumption-onsite,"how much renewable power is generated at their sites?",0.00,0,41
-Google Cloud,provider-cfe-hourly,"their use of carbon free energy on an hourly basis?",90.24,37,41
-Google Cloud,renewable-energy-consumption-goo,"their reliance on certificates for renewable energy elsewhere?",0.00,0,41
-Azure,fossil-fuel-disclosure-onsite,"their burning of fossil fuels at specific sites in all regions?",0.00,0,0
-Azure,renewable-energy-consumption-onsite,"how much renewable power is generated at their sites?",0.00,0,0
-Azure,provider-cfe-hourly,"their use of carbon free energy on an hourly basis?",0.00,0,0
-Azure,renewable-energy-consumption-goo,"their reliance on certificates for renewable energy elsewhere?",0.00,0,0
+service,column,percentage,value,total
+AWS,fossil-fuel-disclosure-onsite,0,0,22
+AWS,renewable-energy-consumption-onsite,0,0,22
+AWS,provider-cfe-hourly,0,0,22
+AWS,renewable-energy-consumption-goo,0,0,22
+Google Cloud,fossil-fuel-disclosure-onsite,0,0,41
+Google Cloud,renewable-energy-consumption-onsite,0,0,41
+Google Cloud,provider-cfe-hourly,90.24,37,41
+Google Cloud,renewable-energy-consumption-goo,0,0,41
+Azure,fossil-fuel-disclosure-onsite,0,0,0
+Azure,renewable-energy-consumption-onsite,0,0,0
+Azure,provider-cfe-hourly,0,0,0
+Azure,renewable-energy-consumption-goo,0,0,0
