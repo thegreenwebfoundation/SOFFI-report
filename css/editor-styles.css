@@ -44,3 +44,8 @@ body {
     text-transform: uppercase;
     font-weight: bold;
 }
+
+.annotate {
+    background-color: #CBFFCB;
+    padding: .1em;
+}
