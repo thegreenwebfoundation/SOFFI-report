@@ -25,7 +25,7 @@
 		<?php endif; ?>
 
 		<?php if($download_pdf): ?>
-			<a class="btn btn--download" href="<?php echo esc_url($download_pdf); ?>" title="Download a PDF version of the report" download>Download PDF<span><svg aria-hidden="true" width="15" height="15"><use href="#arrow"></use></svg></span></a>
+			<a class="btn btn--download" data-cabin-event="Download full report PDF - Hero" href="<?php echo esc_url($download_pdf); ?>" title="Download a PDF version of the report" download>Download PDF<span><svg aria-hidden="true" width="15" height="15"><use href="#arrow"></use></svg></span></a>
 		<?php endif; ?>
 	</div>
 	<div class="grad--bg"></div>

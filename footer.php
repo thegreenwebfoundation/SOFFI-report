@@ -24,7 +24,7 @@ $navFooter = array(
 				<?php
 				$download_pdf = get_field('pdf_report_download', 'options');
 				if($download_pdf): ?>
-					<a class="download" href="<?php echo esc_url($download_pdf); ?>" title="Download a PDF version of the report" download><svg width="15" height="15" aria-hidden="true"><use href="#arrow"></use></svg><span>Download PDF</span></a>
+					<a class="download" data-cabin-event="Download full report PDF - Footer" href="<?php echo esc_url($download_pdf); ?>" title="Download a PDF version of the report" download><svg width="15" height="15" aria-hidden="true"><use href="#arrow"></use></svg><span>Download PDF</span></a>
 				<?php endif; ?>
 				<a href="#top" class="back-to-top"><svg width="15" height="15" aria-hidden="true"><use href="#arrow"></use></svg><span>Back to Top</span></a>
 			</div>
@@ -61,7 +61,7 @@ $navFooter = array(
 	<?php wp_footer(); ?>
 
 	<!-- Privacy-first Analytics from Cabin -->
-	<!-- <script async defer src="https://scripts.withcabin.com/hello.js"></script> -->
+	<script async defer src="https://scripts.withcabin.com/hello.js"></script>
 
 </body>
 </html>

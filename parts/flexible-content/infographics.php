@@ -40,7 +40,10 @@
 					</div>
 					<div>
 						<?php if($graphic_download){ ?>
-							<a class="btn btn--download" href="<?php echo esc_url($graphic_download); ?>" title="Download the infographic" download>Download <span><svg aria-hidden="true" width="15" height="15"><use href="#arrow"></use></svg></a>
+							<?php
+								$track_dwnld = $graphic_title ?: $graphic;
+							?>
+							<a class="btn btn--download" data-cabin-event="Download graphic - <?php echo esc_attr($track_dwnld); ?>" href="<?php echo esc_url($graphic_download); ?>" title="Download the infographic" download>Download <span><svg aria-hidden="true" width="15" height="15"><use href="#arrow"></use></svg></a>
 						<?php } ?>
 					</div>
 				</div>
